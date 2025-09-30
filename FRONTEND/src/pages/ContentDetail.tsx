@@ -445,8 +445,6 @@ const ContentDetail: React.FC = () => {
                   <LikeButton
                     contentId={content.id}
                     type="content"
-                    initialLikes={0}
-                    initialIsLiked={false}
                     size="lg"
                   />
                 </div>

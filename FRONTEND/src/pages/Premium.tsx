@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../components/ui/Button';
 import AlertModal from '../components/ui/AlertModal';
+import SupportModal from '../components/ui/SupportModal';
 import { useAlert } from '../hooks/useAlert';
-import { Lock, Star, CheckCircle } from 'lucide-react';
+import { Lock, Star, CheckCircle, MessageCircle, HelpCircle } from 'lucide-react';
 import axios from 'axios';
 
 const Premium: React.FC = () => {
   const [isPremium, setIspremium] = useState<boolean>(false)
+  const [showSupportModal, setShowSupportModal] = useState(false);
   const { alert, showError, showSuccess, hideAlert } = useAlert();
 
   useEffect(() => {
@@ -129,8 +131,20 @@ const Premium: React.FC = () => {
                       Available soon. Join our waitlist.
                     </p>
                   </div>
-                </div>
-              </div>
+              <Button 
+                variant="outline"
+                onClick={() => setShowSupportModal(true)}
+              >
+                <MessageCircle size={16} className="mr-2" />
+                Contact Support
+              </Button>
+              <Button 
+                variant="ghost"
+                onClick={() => setShowSupportModal(true)}
+              >
+                <HelpCircle size={16} className="mr-2" />
+                View FAQ
+              </Button>
             </div>
             
           </div>
@@ -147,6 +161,11 @@ const Premium: React.FC = () => {
         cancelText={alert.cancelText}
         onConfirm={alert.onConfirm}
         showCancel={alert.showCancel}
+      />
+
+      <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)} 
       />
     </main>
   );

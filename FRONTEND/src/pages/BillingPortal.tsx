@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import AlertModal from '../components/ui/AlertModal';
+import SupportModal from '../components/ui/SupportModal';
 import { useAlert } from '../hooks/useAlert';
-import { CreditCard, ArrowLeft, ExternalLink, Crown, Calendar, DollarSign, XCircle } from 'lucide-react';
+import { CreditCard, ArrowLeft, ExternalLink, Crown, Calendar, DollarSign, XCircle, MessageCircle, HelpCircle } from 'lucide-react';
 import Button from '../components/ui/Button';
 import axios from 'axios';
 
@@ -12,6 +13,7 @@ const BillingPortal: React.FC = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [cancelLoading, setCancelLoading] = useState(false);
+  const [showSupportModal, setShowSupportModal] = useState(false);
   const { alert, showError, showSuccess, hideAlert } = useAlert();
 
   useEffect(() => {
@@ -221,8 +223,20 @@ const BillingPortal: React.FC = () => {
               If you have any questions about your subscription or billing, please contact our support team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="outline">Contact Support</Button>
-              <Button variant="ghost">View FAQ</Button>
+              <Button 
+                variant="outline"
+                onClick={() => setShowSupportModal(true)}
+              >
+                <MessageCircle size={16} className="mr-2" />
+                Contact Support
+              </Button>
+              <Button 
+                variant="ghost"
+                onClick={() => setShowSupportModal(true)}
+              >
+                <HelpCircle size={16} className="mr-2" />
+                View FAQ
+              </Button>
             </div>
           </div>
         </div>
@@ -238,6 +252,11 @@ const BillingPortal: React.FC = () => {
         cancelText={alert.cancelText}
         onConfirm={alert.onConfirm}
         showCancel={alert.showCancel}
+      />
+
+      <SupportModal 
+        isOpen={showSupportModal} 
+        onClose={() => setShowSupportModal(false)} 
       />
     </main>
   );
