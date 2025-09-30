@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import Button from '../components/ui/Button';
-import AlertModal from '../components/ui/AlertModal';
-import SupportModal from '../components/ui/SupportModal';
-import { useAlert } from '../hooks/useAlert';
-import { Lock, Star, CheckCircle, MessageCircle, HelpCircle } from 'lucide-react';
+{"code":"rate-react';
+import axios fromw
+ wrAd"i"  ss`ta"t"mailecvi' 
+t uuoaee.;
+ ` ;r    }
+   =kol<m" clak  r50axxu m   ,Nbo
+ee0Cs b  cH   :f->  ,<  Rohn
+/    :   k  from 'lucide-react';
 import axios from 'axios';
 
 const Premium: React.FC = () => {
