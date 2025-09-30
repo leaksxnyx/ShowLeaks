@@ -5,21 +5,7 @@ import ReportModal from '../components/ui/ReportModal';
 import ContentLimitModal from '../components/ui/ContentLimitModal';
 import CommentSection from '../components/ui/CommentSection';
 import LikeButton from '../components/ui/LikeButton';
-import { 
-  ArrowLeft, 
-  ExternalLink, 
-  Share2, 
-  MoreVertical, 
-  Eye, 
-  Calendar,
-  User,
-  Flag,
-  Download,
-  Play,
-  Image as ImageIcon,
-  Video,
-  HardDrive
-} from 'lucide-react';
+import { ArrowLeft, ExternalLink, Share2, MoveVertical as MoreVertical, Eye, Calendar, User, Flag, Download, Play, Image as ImageIcon, Video, HardDrive } from 'lucide-react';
 import type { Content } from '../types';
 import { contentApi } from '../services/api';
 import { useAuthStore } from '../store/authStore';

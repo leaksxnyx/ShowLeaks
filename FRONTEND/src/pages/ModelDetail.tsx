@@ -7,33 +7,7 @@ import SearchInput from '../components/ui/SearchInput';
 import Pagination from '../components/ui/pagination';
 import CommentSection from '../components/ui/CommentSection';
 import LikeButton from '../components/ui/LikeButton';
-import { 
-  ArrowLeft, 
-  Share2, 
-  MoreVertical, 
-  Eye, 
-  Calendar,
-  Ruler,
-  Weight,
-  MapPin,
-  Heart,
-  Star,
-  Music,
-  Users,
-  Crown,
-  Zap,
-  Camera,
-  User,
-  Flag,
-  X,
-  Clock,
-  TrendingUp,
-  Filter,
-  Play,
-  Image as ImageIcon,
-  Video,
-  HardDrive
-} from 'lucide-react';
+import { ArrowLeft, Share2, MoveVertical as MoreVertical, Eye, Calendar, Ruler, Weight, MapPin, Heart, Star, Music, Users, Crown, Zap, Camera, User, Flag, X, Clock, TrendingUp, ListFilter as Filter, Play, Image as ImageIcon, Video, HardDrive } from 'lucide-react';
 import type { Model, Content, FilterOptions, SortOption } from '../types';
 import { modelsApi, contentApi } from '../services/api';
 import { useAuthStore } from '../store/authStore';

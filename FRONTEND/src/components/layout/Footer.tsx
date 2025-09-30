@@ -54,4 +54,6 @@ const Footer: React.FC = () => {
         onClose={() => setShowSupportModal(false)} 
       />
     </>
+  )
+}
 export default Footer;

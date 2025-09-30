@@ -4,7 +4,7 @@ import { useAuthStore } from '../store/authStore';
 import AlertModal from '../components/ui/AlertModal';
 import SupportModal from '../components/ui/SupportModal';
 import { useAlert } from '../hooks/useAlert';
-import { CreditCard, ArrowLeft, ExternalLink, Crown, Calendar, DollarSign, XCircle, MessageCircle, HelpCircle } from 'lucide-react';
+import { CreditCard, ArrowLeft, ExternalLink, Crown, Calendar, DollarSign, Circle as XCircle, MessageCircle, Circle as HelpCircle } from 'lucide-react';
 import Button from '../components/ui/Button';
 import axios from 'axios';
 
